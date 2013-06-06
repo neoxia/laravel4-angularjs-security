@@ -42,8 +42,8 @@ Route::filter('serviceAuth', function(){
 Route::filter('serviceCSRF',function(){
     if (Session::token() != Request::header('csrf_token')) {
         return Response::json([
-            'message' => 'stop hacking my site !!! you stupid hacker :D'
-        ], 500);
+            'message' => 'I’m a teapot !!! you stupid hacker :D'
+        ], 418);
     }
 });
 
