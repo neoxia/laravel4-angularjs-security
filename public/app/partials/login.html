@@ -1,0 +1,22 @@
+<h1>Login Form</h1>
+<div class="alert" ng-show="flash" ng-bind="flash"></div>
+<form class="form-horizontal" ng-submit="login()">
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">Email</label>
+        <div class="controls">
+            <input type="text" id="inputEmail" placeholder="Email" ng-model="email" required>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputPassword">Password</label>
+        <div class="controls">
+            <input type="password" id="inputPassword" placeholder="Password" ng-model="password" required>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Sign in</button>
+        </div>
+    </div>
+    </div>
+</form>

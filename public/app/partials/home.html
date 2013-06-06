@@ -1,0 +1,21 @@
+<h1>Home Page</h1>
+<button type="submit" class="btn" ng-click="logout()">Sign out</button>
+<table class="table table-striped">
+    <tr ng-repeat="movie in movies">
+        <td>
+            <img ng-src="{{movie.poster}}">
+        </td>
+        <td>
+            {{movie.title}}
+        </td>
+        <td>
+            {{movie.releaseDate | date }}
+        </td>
+        <td>
+            {{movie.genre}}
+        </td>
+        <td>
+            {{movie.synopsis}}
+        </td>
+    </tr>
+</table>
