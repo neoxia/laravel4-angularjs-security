@@ -1,7 +1,7 @@
 angular.module("myApp",['ngResource','ngSanitize'])
     .config(['$routeProvider',function($routeProvider){
-        $routeProvider.when('/',{templateUrl:'app/partials/login.html', controller: 'loginController'})
-        $routeProvider.when('/home',{templateUrl:'app/partials/home.html', controller: 'homeController'})
+        $routeProvider.when('/login',{templateUrl:'app/partials/login.html', controller: 'loginController'})
+        $routeProvider.when('/',{templateUrl:'app/partials/home.html', controller: 'homeController'})
         $routeProvider.otherwise({redirect:'/'})
     }]).config(function($httpProvider){
 
@@ -13,8 +13,8 @@ angular.module("myApp",['ngResource','ngSanitize'])
 
         var error = function(response){
             if (response.status = 401){
-                delete sessionStorage.authenticated
-                $location.path('/')
+                //delete sessionStorage.authenticated
+                $location.path('/login')
                 Flash.show(response.data.flash)
 
             }
